@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springboot CI-CD Deployment App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #00416A, #E4E5E6);
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.45;
+            color: #333;
+        }
+        #container {
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #content {
+            max-width: 43em;
+            padding: 20px;
+            margin: 0 auto;
+            background: #f0f4f8; /* Updated background color */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 3.6em;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+            color: #00416A;
+            text-align: center;
+        }
+        h3 {
+            font-size: 2em;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #00416A;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p, li {
+            font-size: 1.2em;
+            color: #555;
+        }
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: #00416A;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        ul li {
+            padding: 8px 0;
+        }
+        .stage {
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            perspective: 1200px;
+        }
+        .pyramid3d {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: turnPyramid 10s linear infinite;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .triangle:before {
+            content: "";
+            position: absolute;
+            height: 0; width: 0;
+            border-style: solid;
+            border-width: 88px 38px 0 38px;
+        }
+        .side1 { transform: rotateY(0deg) rotateZ(45deg); }
+        .side2 { transform: rotateY(90deg) rotateZ(45deg); }
+        .side3 { transform: rotateY(180deg) rotateZ(45deg); }
+        .side4 { transform: rotateY(270deg) rotateZ(45deg); }
+        .side1:before { border-color: rgba(115, 115, 0, 0.3) transparent transparent transparent; }
+        .side2:before { border-color: rgba(20, 90, 225, 0.3) transparent transparent transparent; }
+        .side3:before { border-color: rgba(255, 0, 0, 0.3) transparent transparent transparent; }
+        .side4:before { border-color: rgba(0, 255, 255, 0.3) transparent transparent transparent; }
+        @keyframes turnPyramid {
+            100% { transform: rotateX(75deg) rotate(425deg); }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.4em; }
+            h3 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <h1>Springboot CI-CD Deployment App</h1>
+            <div class="stage">
+                <div class="pyramid3d">
+                    <div class="triangle side1"></div>
+                    <div class="triangle side2"></div>
+                    <div class="triangle side3"></div>
+                    <div class="triangle side4"></div>
+                </div>
+            </div>
+            <h3>SPRING-BOOT Web Application</h3>
+            <p>This is the final product stage—which displays the automated, integrated, and deployed Spring Boot web application—per management's request.</p>
+            <p>Users can access and host the application. The following technologies were employed:</p>
+            <ul>
+                <li><a href="#">Eclipse</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Jenkins</a></li>
+                <li><a href="#">AWS EC2</a></li>
+            </ul>
+            <p>If you have any new requests or product enhancements, please get in touch with Regina.</p>
+        </div>
+    </div>
+</body>
+</html>
